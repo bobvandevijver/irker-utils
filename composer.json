@@ -1,0 +1,31 @@
+{
+  "name": "bobv/irker-utils",
+  "description": "Small utility to connect with an irker service.",
+  "keywords": [
+    "irker",
+    "irc"
+  ],
+  "type": "library",
+  "license": "MIT",
+  "homepage": "https://github.com/bobvandevijver/irker-utils",
+  "authors": [
+    {
+      "name": "Bob van de Vijver",
+      "email": "bobvandevijver@hotmail.com"
+    }
+  ],
+  "require": {
+    "php": ">=7.3",
+    "ext-json": "*",
+    "ext-sockets": "*"
+  },
+  "config": {
+    "preferred-install": "dist",
+    "sort-packages": true
+  },
+  "autoload": {
+    "psr-4": {
+      "BobV\\IrkerUtils\\": "src/"
+    }
+  }
+}

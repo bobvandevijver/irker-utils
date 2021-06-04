@@ -1,0 +1,17 @@
+* text
+*.png binary
+*.jpg binary
+*.gif binary
+*.ico binary
+*.svg binary
+*.phar binary
+*.mp3 binary
+*.ogg binary
+*.woff binary
+*.woff2 binary
+*.ttf binary
+*.eot binary
+*.pdf binary
+
+/.gitattributes     export-ignore
+/.gitignore         export-ignore
