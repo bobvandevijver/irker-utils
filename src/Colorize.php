@@ -22,29 +22,31 @@ class Colorize
    * 14  Grey  (127,127,127)
    * 15  Light Grey  (210,210,210)
    */
-  const COLOR_WHITE = 0;
-  const COLOR_BLACK = 1;
-  const COLOR_BLUE = 2;
-  const COLOR_GREEN = 3;
-  const COLOR_LIGHT_RED = 4;
-  const COLOR_DARK_RED = 5;
-  const COLOR_PURPLE = 6;
-  const COLOR_ORANGE = 7;
-  const COLOR_YELLOW = 8;
-  const COLOR_LIGHT_GREEN = 9;
-  const COLOR_CYAN = 10;
-  const COLOR_LIGHT_CYAN = 11;
-  const COLOR_LIGHT_BLUE = 12;
-  const COLOR_PINK = 13;
-  const COLOR_GREY = 14;
-  const COLOR_LIGHT_GREY = 15;
+  final public const int COLOR_WHITE = 0;
+  final public const int COLOR_BLACK = 1;
+  final public const int COLOR_BLUE = 2;
+  final public const int COLOR_GREEN = 3;
+  final public const int COLOR_LIGHT_RED = 4;
+  final public const int COLOR_DARK_RED = 5;
+  final public const int COLOR_PURPLE = 6;
+  final public const int COLOR_ORANGE = 7;
+  final public const int COLOR_YELLOW = 8;
+  final public const int COLOR_LIGHT_GREEN = 9;
+  final public const int COLOR_CYAN = 10;
+  final public const int COLOR_LIGHT_CYAN = 11;
+  final public const int COLOR_LIGHT_BLUE = 12;
+  final public const int COLOR_PINK = 13;
+  final public const int COLOR_GREY = 14;
+  final public const int COLOR_LIGHT_GREY = 15;
 
   static function colorize(string $message, int $color): string
   {
-    if ($color < 10) {
-      return sprintf('%s0%s%s%s', chr(03), $color, $message, chr(03));
-    } else {
-      return sprintf('%s%s%s%s', chr(03), $color, $message, chr(03));
-    }
+    return sprintf(
+      $color < 10 ? '%s0%s%s%s' : '%s%s%s%s',
+      chr(03),
+      $color,
+      $message,
+      chr(03)
+    );
   }
 }
